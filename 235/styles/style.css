@@ -62,6 +62,9 @@ img.project {
     border: 2px solid var(--main);
     margin-top: 20px;
 }
+img#valid {
+    float:right;
+}
 h1, h2 {
     color: var(--background2);
     text-decoration: underline;
