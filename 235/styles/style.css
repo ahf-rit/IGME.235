@@ -1,0 +1,94 @@
+:root {
+    --background1: #5F0F40;
+    --background2: #9A031E;
+    --highlight:   #FB8B24;
+    --main:        #E36414;
+    --accent1:     #0F4C5C;
+    --accent2:     #0D2A3A;
+}
+body {
+    background-color: var(--background1);
+}
+header, main, footer {
+    margin: 0 20%;
+    text-align: center;
+    font-family: "Space Mono";
+    background-color: gray;
+}
+footer {
+    margin: 30px 39%;
+    border-radius: 20px;
+}
+
+section {
+    display: flex;
+    flex-flow: row;
+    background-color: gray;
+}
+div {
+    margin-bottom: 5%;
+}
+div#project1 {
+    height: 30vh;
+    background-color: var(--highlight);
+    margin-right: 10%;
+    width: 30%;
+}
+div#project2 {
+    height: 30vh;
+    background-color: var(--highlight);
+    width: 30%;
+}
+div#project3 {
+    height: 30vh;
+    background-color: var(--highlight);
+    margin-left: 10%;
+    width: 30%;
+}
+hr {
+    color: var(--background1);
+    border: 15px solid var(--background1);
+}
+
+img {
+    background-color: gray;
+    border: 1px solid gray;
+}
+img.headImage{
+    border: 2px solid var(--background2);
+    box-shadow: 0px 0px 20px var(--accent1);
+}
+img.project {
+    border: 2px solid var(--main);
+    margin-top: 20px;
+}
+h1, h2 {
+    color: var(--background2);
+    text-decoration: underline;
+}
+h3 {
+    font-size: 2vw;
+}
+
+a {
+    font-size: 30px;
+    text-decoration: none;
+}
+a#git {
+    font-size: 2vw;
+    font-weight: bold;
+}
+a:link {
+    color: var(--accent1);
+}
+a:visited {
+    color: var(--accent2);
+}
+a:hover {
+    background-color: var(--background2);
+    border-radius: 20px;
+}
+a:active {
+    color: var(--background1);
+    background: none;
+}
