@@ -1,0 +1,42 @@
+
+h1 { 
+    color: #FB8500;
+    font-family: Asimovian, sans-serif;
+    font-size:xxx-large;
+    border-bottom: 3px solid #023047;
+}
+blockquote { 
+    background-color: lightgray;
+    padding: 1rem;
+}
+body {
+    background-color: #8ECAE6;
+    font-family: Arial, sans-serif;
+}
+h2 {
+    color: #FFB703;
+    font-family: sans-serif;
+}
+p {
+    margin-left: 100px;
+}
+img {
+    border: 5px solid #FB8500;
+}
+img.side {
+    float:right;
+    margin: 0 12px;
+}
+img.borderExclude {
+    border: 0px;
+}
+footer {
+    background-color: #219EBC;
+}
+hr {
+    height: 1px;
+    background-color: #023047;
+}
+a {
+    color:#023047;
+}
