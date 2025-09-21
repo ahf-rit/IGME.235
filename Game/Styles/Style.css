@@ -6,32 +6,37 @@ h1 {
     border-bottom: 3px solid #023047;
 }
 blockquote { 
-    background-color: lightgray;
+    background-color: #219EBC;
     padding: 1rem;
 }
 body {
-    background-color: #8ECAE6;
+    background-color: #023047;
+    background-image: url(../images/dig-dug.svg);
+    background-size: 5vw 10vh;
+    background-repeat: repeat-y;
     font-family: Arial, sans-serif;
 }
 h2 {
     color: #FFB703;
     font-family: sans-serif;
+    margin: 10px;
 }
 p {
     margin-left: 100px;
 }
 img {
     border: 5px solid #FB8500;
+    
 }
-img.side {
+img.left {
+    margin: 0 12px;
+}
+img.right {
     float:right;
     margin: 0 12px;
 }
 img.borderExclude {
     border: 0px;
-}
-footer {
-    background-color: #219EBC;
 }
 hr {
     height: 1px;
@@ -39,4 +44,10 @@ hr {
 }
 a {
     color:#023047;
+}
+main, header, footer {
+    background-color: #8ECAE6;
+    border: 10px solid #023047;
+    margin: 0 auto;
+    width: 80vw;
 }
