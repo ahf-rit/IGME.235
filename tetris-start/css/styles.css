@@ -7,14 +7,40 @@ figure {
     display: flex;
     flex-flow: column nowrap;
     flex: 0 1 650px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 section {
     display: flex;
     flex-flow: row wrap;
-    flex: 0, 1 10px;
 }
+div {
+    flex: 1 1 500px;
+    border: 1px solid black;
+    text-align: center;
+}
+div.tet img {
+    width: 60%;
+}
+
+div.long img {
+    width: 80%;
+}
+
+div.square img {
+    width: 40%;
+}
+
+div.aliases {
+    text-align: left;
+    margin: 1em;
+}
+span {
+    display: block;
+    margin: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+
 header, main, footer {
     width: 90%;
     margin-left: auto;
