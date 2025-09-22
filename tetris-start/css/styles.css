@@ -1,0 +1,29 @@
+/* Do everything in this file */
+h2 {
+    border-bottom: 5px solid red;
+    clear: right;
+}
+figure {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 0 1 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+section {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 0, 1 10px;
+}
+header, main, footer {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer {
+    position: fixed;
+    width: auto;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+}
