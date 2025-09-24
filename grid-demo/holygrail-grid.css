@@ -1,0 +1,84 @@
+/**************************************
+General Formatting (Leave This Alone!)
+**************************************/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* sets base font size for rem sizing */
+    font-size: 16px;
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+header,
+footer {
+    /* centers header and footer content horizontally and vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #86af49;
+}
+
+nav,
+aside,
+article {
+    padding: .5rem;
+}
+
+nav, aside {
+    background-color: #b5e7a0;
+    border: 1px dotted black; 
+}
+
+/*****************
+Grid Formatting  
+*****************/
+body {
+    background-color: blanchedalmond;
+}
+
+div#wrapper {
+    margin: 0 auto;
+    display: grid;
+    height:100vh;
+    max-width: 1200px;
+    grid-template-rows: 1fr 2fr 10fr 2fr 1fr;
+    grid-template-areas: "header" "sidenav" "article" "sidebar" "footer";
+}
+
+@media only screen and (min-width:760px) {
+    div#wrapper {
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-columns: 20% auto 20%;
+        grid-template-areas:
+            "header  header  header"
+            "sidenav article sidebar"
+            "footer footer  footer";
+    }
+    article {
+    overflow: auto;
+    }
+}
+header {
+    grid-area:header;
+}
+article {
+    grid-area:article;
+    background-color: white;
+}
+nav {
+    grid-area:sidenav;
+}
+aside {
+    grid-area:sidebar;
+}
+footer {
+    grid-area:footer;
+}
