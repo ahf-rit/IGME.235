@@ -52,6 +52,7 @@ ul.menu li:hover ul {
     padding: 10px;
     color: white;
     text-decoration: none;
+    transition: transform 0.1s ease-in;
 }
 .menu li {
     width: 25%;
@@ -64,6 +65,7 @@ ul.menu li:hover ul {
 .menu a:hover {
     background: red;
     color: yellow;
+    transform: scale(1.1);
 }
 .menu .submenu li>a:hover {
     background:red;
@@ -96,8 +98,8 @@ div.tet {
     transform: translateX(205px) rotate(90deg);
 }
 #z img:hover {
-    transform-origin: -100 -100;
-    transform: translateX(205px) rotate(0deg);
+    transform-origin: 0 0;
+    transform: rotate(0deg);
 }
 #z {
     grid-column: 2/span 2;
@@ -117,7 +119,7 @@ div.tet {
 }
 #l img:hover {
     transform-origin: 0 0;
-    transform: translateX(205px) rotate(0deg);
+    transform: rotate(0deg);
 }
 #l {
     grid-column: -2/-3;
