@@ -24,6 +24,13 @@ div#wrapper {
         grid-template-columns: 500px 1fr;
     }
 }
+h1.game {
+    width: 500px;
+    height: 345px;
+    background: url(../images/tetris-logo.png) no-repeat;
+    text-indent: -9999px;
+}
+
 
 h1.game { grid-area: logo; }
 #introduction { grid-area: intro; }
