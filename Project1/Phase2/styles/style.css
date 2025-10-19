@@ -32,11 +32,11 @@ hr {
 body {
     background-image: url(../images/background.png);
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100vh;
     background-attachment:fixed;
-    background-position: 150px 200px;
+    background-position: 100px 100px;
     background-color: rgb(182, 164, 159);
-    margin: 15vh 10vw;
+    margin: 5vh 10vw;
     margin-bottom: 0;
     font-family: Montserrat;
     display: grid;
@@ -56,36 +56,41 @@ main {
     grid-area:body;
 }
 footer {
-    grid-area:footer;
+    grid-area:side;
 }
 section {
-    display: flex;
-    flex-flow: column nowrap;
+    display: grid;
     font-size: small;
 }
 p {
     margin: 0 10%;
-    margin-bottom: 2vh;
+    margin-bottom: 10px;
     font-weight: normal;
 }
 div {
     font-weight: 600;
     text-align: center;
-    margin-left: -7vw;
+    margin: 0 -25%;
     background-color: rgba(0, 0, 0, 0.274);
     margin-bottom: 5%;
+    max-height: 200px;
+    overflow:hidden;
+}
+div:hover {
+    max-height: min-content;
 }
 #j {
-    float: right;
     font-size: small;
     color: white;
     text-align: left;
-    transform: translate(-100%, -2300%);
-    width: 20vw;
+    margin: 0 25%;
+    margin-left: 0;
+    margin-top: 200%;
+    width: 100%;
 }
 #j p {
-    color: black;
-    font-size: smaller;
+    color: rgb(255, 255, 255);
+    font-size: small;
 } 
 b {
     color: rgb(255, 115, 0);
@@ -94,6 +99,7 @@ b {
 img {
     width: 75%;
     background-color: black;
+    margin-top: 10px;
 }
 
 a {
@@ -102,7 +108,46 @@ a {
 a:visited {
     color:black;
 }
-@media screen and (min-width:800) {
 
-    
+@media only screen and (min-width:800px) {
+    body {
+        background-image: none;
+        grid-template-areas:
+            "header header header"
+            "link1  link2   side"
+            "link3  link4   side"
+            "link5  link6   side"
+            "link7  link8   side"
+            "link9  link9   side"
+            "footer footer  side";
+        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-rows: 1fr;
+    }
+    div#a {
+        grid-area: link1;
+    }
+    div#b {
+        grid-area: link2;
+    }
+    div#c {
+        grid-area: link3;
+    }
+    div#d {
+        grid-area: link4;
+    }
+    div#e {
+        grid-area: link5;
+    }
+    div#f {
+        grid-area: link6;
+    }
+    div#g {
+        grid-area: link7;
+    }
+    div#h {
+        grid-area: link8;
+    }
+    div#i {
+        grid-area: link9;
+    }
 }
