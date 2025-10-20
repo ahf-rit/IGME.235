@@ -110,44 +110,47 @@ a:visited {
 }
 
 @media only screen and (min-width:800px) {
+    * {
+        margin: auto;
+        width: auto;
+    }
     body {
-        background-image: none;
         grid-template-areas:
-            "header header header"
-            "link1  link2   side"
-            "link3  link4   side"
-            "link5  link6   side"
-            "link7  link8   side"
-            "link9  link9   side"
-            "footer footer  side";
+            "header header  side"
+            "body   body    side"
+            "footer footer  footer";
         grid-template-columns: 1fr 1fr 2fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: auto;
+        background-position: right;
     }
-    div#a {
-        grid-area: link1;
+    footer {
+        grid-area: footer;
     }
-    div#b {
-        grid-area: link2;
+    h2#over {
+        margin-left: -6%;
+        margin-bottom: 0;
     }
-    div#c {
-        grid-area: link3;
+    h1 {
+        font-size: 5vw;
+        text-align: left;
+        letter-spacing: 10%;
     }
-    div#d {
-        grid-area: link4;
+    section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 50vw;
+        gap: 10px;
     }
-    div#e {
-        grid-area: link5;
+    hr {
+        width: 100%;
     }
-    div#f {
-        grid-area: link6;
+    div {
+        width: 100%;
+        max-height: 280px;
     }
-    div#g {
-        grid-area: link7;
+    #j {
+        margin: 0 0;
     }
-    div#h {
-        grid-area: link8;
-    }
-    div#i {
-        grid-area: link9;
-    }
+
 }
