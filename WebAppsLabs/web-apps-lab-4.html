@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>web-apps-3</title>
+	<title>web-apps-4</title>
 	<style>
 		body{border:1px solid gray;}
 	</style>
@@ -40,19 +40,17 @@
         		"New Media Club" : "http://newmediaclub.cias.rit.edu"
         }
 
-        //3
-        let colorList = document.querySelector("#colorsList");
-        for (let color in colors)
+        function createList(listElement,array=["puppydogs", "butterflies"])
         {
-            colorList.innerHTML += "<li>" + colors[color] + "</li>"
+            let list = document.querySelector(listElement);
+            for (let item of array)
+            {
+                list.innerHTML += "<li>" + item + "</li";
+            }
         }
-        //4
-        let foodList = document.querySelector("#foodsList");
-        for (let food of foods)
-        {
-            foodList.innerHTML += "<li>" + food + "</li>";
-        }
-        //6
+
+        createList("#colorsList", colors);
+        createList("#foodsList", foods);
         let linkList = document.querySelector("#linksList");
         for (let link in links)
         {
