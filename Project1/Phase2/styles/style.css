@@ -1,0 +1,72 @@
+h2#over {
+    margin-bottom: -2%;
+    margin-left: -5vw;
+    font-family: "Nothing You Could Do";
+    font-weight: 900;
+}
+h2 {
+    margin: 0 0;
+    font-size: xx-large;
+}
+h2#under {
+    margin-bottom: 2vh;
+    font-family: 'Roboto Condensed';
+    font-weight: 400;
+
+}
+h1 {
+    text-align: left;
+    font-size: 13vw;
+    margin: 0 -7.6vw;
+    font-weight: lighter;
+    letter-spacing: 4vw;
+    font-family: 'cormorant Garamond';
+}
+hr {
+    width: 95vw;
+    margin-top: -1vh;
+    margin-bottom: 1.5vh;
+    margin-left: -7.5vw;
+}
+body {
+    background-image: url(../images/background.png);
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    margin: 15vh 10vw;
+    margin-bottom: 0;
+    font-family: Montserrat;
+}
+main {
+    margin-right: 60%;
+    text-align: left;
+}
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: small;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 2vh;
+    font-weight: normal;
+}
+div {
+    font-weight: 600;
+    text-align: center;
+    margin-left: -7vw;
+}
+#i {
+    float: right;
+    font-size: small;
+    color: white;
+    text-align: left;
+    transform: translate(8vw, -20vh);
+    width: 20vw;
+}
+#i p {
+    color: black;
+    font-size: smaller;
+} 
+b {
+    color: rgb(255, 115, 0);
+}

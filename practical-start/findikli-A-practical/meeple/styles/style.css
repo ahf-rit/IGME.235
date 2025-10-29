@@ -1,0 +1,77 @@
+/* Link states */
+a:link {
+    color: rgb(61, 26, 234);
+    text-decoration: none;
+}
+a:visited {
+    color: rgb(96, 92, 175);
+} 
+a:hover {
+    color: rgb(17, 0, 104);
+    text-decoration: underline;
+}
+a:focus {
+    outline: 2px solid #ffa500;
+}
+a:active {
+    color: rgb(255,0,0);
+}
+
+/* Header styling */
+header {
+    background-color: burlywood;
+    border: 2px solid gray;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5em;
+    color: black;
+}
+
+/* Footer styling */
+footer {
+    background-color: darkgray;
+    color:white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Main content */
+main {
+    padding:20px;
+}
+
+/* Feel free to add any additional CSS rules that you need */
+img {
+    width:500px;
+}
+p#first {
+    font-size: 1.1em;
+    font-style: italic;
+}
+
+/* Game list styling using flexbox or grid */
+.game-list {
+    display: grid;
+    grid-template-areas: "grid";
+}
+
+@media only screen and (min-width: 760px) {
+    .game-list {
+    grid-template-areas:
+        "game game game"
+        "game game game";
+    grid-template-columns: 1fr 1fr 1fr;
+}
+}
+
+.game {
+    border: 1px solid lightgray;
+    background-color: rgb(241, 241, 241);
+}
+
+.game h3, .game p {
+    text-align: center;
+}
+.game h3 {
+    color: burlywood;
+}
