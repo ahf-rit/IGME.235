@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>web-apps-3</title>
+	<style>
+		body{border:1px solid gray;}
+	</style>
+</head>
+<body>
+    <h1>My Favorites</h1>
+    <h2>My Favorite Colors</h2>
+
+    <ol id="colorsList">
+    
+    </ol>
+
+    <h2>My Favorite Foods</h2>
+
+    <ol id="foodsList">
+    
+    </ol>
+
+    <h2>My Favorite Links</h2>
+
+    <ol id="linksList">
+    
+    </ol>
+
+    <script>
+        "use strict";
+        let colors = ["purple", "orange", "pink", "yellow", "red", "black"];
+        let foods = ["pasta", "potatos", "bread", "steak", "pork", "beef jerky"]; // add some foods
+
+        // Optional - can you figure out how to pull both the key AND the value
+        // from the `links` object literal?
+        let links = {
+        		"RIT": "http://www.rit.edu",
+        		"RWAG" : "https://www.facebook.com/RWAGclub",
+        		"New Media Club" : "http://newmediaclub.cias.rit.edu"
+        }
+
+        //3
+        let colorList = document.querySelector("#colorsList");
+        for (let color in colors)
+        {
+            colorList.innerHTML += "<li>" + colors[color] + "</li>"
+        }
+        //4
+        let foodList = document.querySelector("#foodsList");
+        for (let food of foods)
+        {
+            foodList.innerHTML += "<li>" + food + "</li>";
+        }
+        //6
+        let linkList = document.querySelector("#linksList");
+        for (let link in links)
+        {
+            linkList.innerHTML += "<li><a href='" + links[link] + "'>" + link + "</a></li>";//"<li>" + "<a href=" + + "</li>";
+        }
+    </script>
+</body>
+</html>
