@@ -30,26 +30,39 @@
 
     <div id="colorform">
     	<legend>Choose your favorite color!</legend>
-    	<p><input type="radio" name="colorGroup" id="colorGroupRed" value="red" /> Red</p>
-    	<p><input type="radio" name="colorGroup" id="colorGroupGreen" value="green" /> Green</p>
-    	<p><input type="radio" name="colorGroup" id="colorGroupBlue" value="blue" /> Blue</p>
+    	<p><input type="radio" name="colorGroup" id="colorGroupRed" value="red"/> Red</p>
+    	<p><input type="radio" name="colorGroup" id="colorGroupGreen" value="green"/> Green</p>
+    	<p><input type="radio" name="colorGroup" id="colorGroupBlue" value="blue"/> Blue</p>
     	<p><button id="colorButton" type="button">Submit</button></p>
-    	<p id="info">as</p>
+    	<p id="info"></p>
     </div>
 
     <script>
         /* Write your code here! */
-        let inputs = document.querySelectorAll("input[type='radio']");
+        let inputs = document.querySelectorAll("input");
 
-        let output = document.querySelectorAll("#info")
+		let submit = document.querySelector("#colorButton");
 
-        for (let button of inputs)
-        {
-            button.onchange = function(e)
-            {
-                output.innerHTML = "You have selected '" + e.target.value + "'!";
-            }
-        }
+        let output = document.querySelector("#info");
+
+		let legend = document.querySelector("legend");
+
+		submit.addEventListener("click", () => {
+			let color;
+			for (let option of inputs) {
+				if (option.checked) {
+					color = option;
+				}
+			}
+			output.innerHTML = "You have submitted '" + color.value + "'!";
+			legend.style.color = color.value;
+		});
+
+		for(let button of inputs) {
+			button.addEventListener('change', (event) => {
+                output.innerHTML = "You have selected '" + button.value + "'!";
+        	});
+		}
     </script>
 </body>
 </html>
