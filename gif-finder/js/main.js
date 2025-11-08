@@ -84,7 +84,7 @@ function dataLoaded(e) {
     // 9 - start building an HTML string we will display to the user
     let results = obj.data;
     console.log("results.length = " + results.length);
-    let bigString = "<p><i>Here are " + results.length + " results for '" + displayTerm + "'</i></p>";
+    let bigString = "";
 
     // 1 - loop through the array of results
     for (let result of results) {
@@ -97,11 +97,12 @@ function dataLoaded(e) {
 
         // 13 - Build a <div> to hold each result
         // E26 String Templating
-        let line = `<div class='result'><img src='${smallURL}' title= '${result.id}' />`;
+        let line = `<div class='result'>`;
         line += `<span><a target='_blank' href='${url}'>View on Giphy</a></span>`;
 
         // X
-        line += `<br>Rating: ${result.rating.toUpperCase()}</div>`;
+        line += `<br>Rating: ${result.rating.toUpperCase()}<br>`;
+        line += `<img src='${smallURL}' title= '${result.id}'/></div>`;
 
         // 14 - another way of doing the same thing aboe
         // replaces this:
@@ -123,7 +124,7 @@ function dataLoaded(e) {
     document.querySelector("#content").innerHTML = bigString;
 
     // 17 - update the status
-    document.querySelector("#status").innerHTML = "<b>Success!</b>"
+    document.querySelector("#status").innerHTML = "<b>Success!</b>" + `<br><i>Here are ${results.length} results for '${displayTerm}'</i><br>`;
 }
 
 function dataError(e) {
