@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixiJS-1</title>
+    <script src="https://pixijs.download/release/pixi.min.js"></script>
+</head>
+
+<body>
+    <script type="module">
+        // #1 - Create a new Pixi application
+        // https://pixijs.download/release/docs/app.Application.html
+        const app = new PIXI.Application();
+        await app.init({ width: 640, height: 360 });
+
+        // #2 - Append its "view" (a <canvas> tag that it created for us) to the DOM
+        document.body.appendChild(app.canvas);
+
+        app.renderer.background.color = 0xFF00FF;
+
+        const square = new PIXI.Graphics();
+        square.rect(-20,-20,40,40);
+        square.fill(0xFF0000);
+        square.x = 50;
+        square.y = 50;
+        square.stroke({ width: 2, color: 0xFFFF00, alpha: 1});
+
+        app.stage.addChild(square);
+
+        const circle = new PIXI.Graphics();
+        circle.circle(0, 0, 20);
+        circle.fill(0xFF0000);
+        circle.x = 125;
+        circle.y = 50;
+
+        app.stage.addChild(circle);
+
+        const line = new PIXI.Graphics();
+        line.moveTo(0,0);
+        line.lineTo(590, 0);
+        line.stroke({width: 4, color: 0xFF0000});
+        line.x = 5;
+        line.y = 100;
+
+        app.stage.addChild(line);
+
+        const poly = new PIXI.Graphics;
+        poly.moveTo(0,0);
+        poly.lineTo(-100, 100);
+        poly.lineTo(100, 100);
+        poly.lineTo(0, 0);
+        poly.stroke({width: 4, color: 0xFF0000});
+        poly.fill(0x00FF00);
+        poly.x = 150;
+        poly.y = 150;
+
+        app.stage.addChild(poly);
+    </script>
+</body>
+
+</html>
